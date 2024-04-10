@@ -1,0 +1,114 @@
+
+body {
+    font-family: sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    height: 100%;
+}
+
+footer{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: auto; 
+    bottom: 0;
+}
+.footer_gallery{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: auto; 
+    bottom: 0;
+}
+
+header > *{
+    flex-grow:1;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown li {
+    display: block;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+@media (max-width: 800px) {
+    nav ul li {
+        display: block;
+        margin: 0;
+    }
+}
+
+
+.site-container {
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;
+}
+
+#timisoreana{
+    width: 5.75%;
+}
+#timisoreana:hover{
+    width: 8%;
+    
+    transition: transform 3s;
+    transform: rotate(1080deg);
+}
+
+.Titlu{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.photo-gallery img {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 300px;
+}
