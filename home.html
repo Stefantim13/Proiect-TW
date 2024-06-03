@@ -11,9 +11,9 @@
 <body>
     <header>
         <div><audio controls id="muzica">
-                <source src="vama-omul_plajei.mp3" type="audio/mpeg">
-                Browserul tău nu suportă elementul audio.
-            </audio></div>
+            <source src="vama-omul_plajei.mp3" type="audio/mpeg">
+            Browserul tău nu suportă elementul audio.
+        </audio></div>
         <div>
             <h1>Descoperă Vama Veche</h1>
             <nav>
@@ -26,9 +26,7 @@
                         </ul>
                     </li>
                     <li><a href="galerie.html">Galerie</a></li>
-                    <li><a
-                            href="https://www.turistinfo.ro/vama_veche/cazare-hoteluri-vile-pensiuni-vama_veche.html">Cazari</a>
-                    </li>
+                    <li><a href="https://www.turistinfo.ro/vama_veche/cazare-hoteluri-vile-pensiuni-vama_veche.html">Cazari</a></li>
                 </ul>
             </nav>
         </div>
@@ -36,14 +34,42 @@
     </header>
     <main>
         <section>
+            <h2 class="Titlu">Bine ai venit în Vama Veche!</h2>
             <article>
-                <span class="Titlu">Bine ai venit în Vama Veche!</span>
-                <p>Vama Veche este un sat situat la extremitatea sud-estică a României, pe coasta Mării Negre, parte a
-                    comunei Limanu, județul Constanța. Acest loc este cunoscut pentru atmosfera sa boemă și spiritul
-                    liber, atrăgând de-a lungul timpului artiști, muzicieni, scriitori și iubitori ai naturii și
-                    libertății.</p>
+                <h3>Introducere</h3>
+                <p>Vama Veche este un sat situat la extremitatea sud-estică a României, pe coasta Mării Negre, parte a comunei Limanu, județul Constanța. Acest loc este cunoscut pentru atmosfera sa boemă și spiritul liber, atrăgând de-a lungul timpului artiști, muzicieni, scriitori și iubitori ai naturii și libertății.</p>
             </article>
         </section>
+
+        <section>
+            <h2>Întrebări</h2>
+            <form id="questionForm">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="age">Age:</label><br>
+                <input type="number" id="age" name="age" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="question">Question:</label><br>
+                <textarea id="question" name="question" required></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="message"></div>
+            <div id="error-message"></div>
+        </section>
+
+        <section>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" required><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br>
+                <button type="submit">Login</button>
+            </form>
+            <div id="login-message"></div>
+        </section>
+
         <div class="scene">
             <div class="sun"></div>
             <div class="ground"></div>
@@ -65,6 +91,7 @@
     <footer>
         <p>&copy; 2024 Descoperă Vama Veche</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

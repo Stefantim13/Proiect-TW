@@ -1,4 +1,4 @@
-main{
+main {
     padding-left: 20px;
     padding-top: 20px;
 }
@@ -8,9 +8,10 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,7 +22,7 @@ header{
     height: 100%;
 }
 
-footer{
+footer {
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -30,7 +31,8 @@ footer{
     height: auto; 
     bottom: 0;
 }
-.footer_gallery{
+
+.footer_gallery {
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -39,8 +41,17 @@ footer{
     bottom: 0;
 }
 
-header > *{
-    flex-grow:1;
+.highlight {
+    background-color: yellow;
+    color: violet;
+    font-size: 1.5em;
+    border: 2px solid blue;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+header > * {
+    flex-grow: 1;
 }
 
 nav ul {
@@ -76,7 +87,7 @@ nav ul li:hover .dropdown {
 }
 
 @media (max-width: 800px) {
-    header{
+    header {
         flex-direction: column;
     }
     nav ul li {
@@ -85,37 +96,78 @@ nav ul li:hover .dropdown {
     }
 }
 
-
 .site-container {
     display: flex;
     flex-direction: column; 
     min-height: 100vh;
 }
 
-#timisoreana{
+#timisoreana {
     width: 5.75%;
 }
-#timisoreana:hover{
+
+#timisoreana:hover {
     transition: transform 3s;
     transform: rotate(1080deg);
 }
 
-.Titlu{
+.Titlu {
     font-size: 36px;
     font-weight: 700;
 }
 
 .photo-gallery {
+    position: relative;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
 }
 
 .photo-gallery img {
+    display: none;
     margin: 5px;
     border: 1px solid #ccc;
     float: left;
-    width: 300px;
+    width: 30%; 
+    height: auto;
+    transition: opacity 1s ease-in-out;
+}
+
+.photo-gallery img.visible {
+    display: block;
+    opacity: 1;
+}
+
+.photo-gallery img:not(.visible) {
+    opacity: 0;
+}
+
+.gallery-buttons button:first-child {
+    margin-left: -20px; 
+}
+
+.gallery-buttons {
+    position: absolute;
+    top: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    transform: translateY(-50%);
+}
+
+.gallery-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 20px 30px; 
+    font-size: 1.5em; 
+    cursor: pointer;
+    border-radius: 5px; 
+}
+
+.gallery-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .scene {
@@ -140,15 +192,16 @@ nav ul li:hover .dropdown {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 50px; /* Height of the horizon */
+    height: 50px; 
+    z-index: -1;
 }
 
 @keyframes sunrise {
     0% {
-        bottom: -500px; /* Start position */
+        bottom: -500px; 
     }
     100% {
-        bottom: 500px; /* End position, just above the horizon */
+        bottom: 1000px; 
     }
 }
 

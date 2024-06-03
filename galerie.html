@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class = "site-container">
+    <div class="site-container">
         <header>
             <div><audio controls id="muzica">
-            <source src="vama-omul_plajei.mp3" type="audio/mpeg">
+                <source src="vama-omul_plajei.mp3" type="audio/mpeg">
                 Browserul tău nu suportă elementul audio.
             </audio></div>
             <div>
@@ -33,8 +33,9 @@
         </header>
         <main>
             <section>
+                <h2 class="Titlu">Galerie Foto</h2>
                 <article>
-                    <span class="Titlu">Galerie</span>
+                    <h3>Imagini din Vama Veche</h3>
                     <div class="photo-gallery">
                         <img src="vama-9.jpg" alt="Vama Veche 9">
                         <img src="vama-3.jpg" alt="Vama Veche 3">
@@ -42,19 +43,22 @@
                         <img src="vama-4.jpg" alt="Vama Veche 4">
                         <img src="vama-7.jpg" alt="Vama Veche 7">
                         <img src="vama-8.jpg" alt="Vama Veche 8">
-                        <img src="vama-10.jpg" alt="Vama Veche 10">
                         <img src="vama-11.jpg" alt="Vama Veche 11">
                         <img src="vama-12.jpg" alt="Vama Veche 12">
-                        <img src="vama-13.jpg" alt="Vama Veche 13">
                         <img src="vama-1.jpg" alt="Vama Veche 1">
                         <img src="vama-2.jpg" alt="Vama Veche 2">
+                    </div>
+                    <div class="gallery-buttons">
+                        <button id="prevButton">&lt;</button>
+                        <button id="nextButton">&gt;</button>
                     </div>
                 </article>
             </section>
         </main>
-        <div class = "footer_gallery">
+        <div class="footer_gallery">
             <p>&copy; 2024 Descoperă Vama Veche</p>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
